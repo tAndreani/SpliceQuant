@@ -13,7 +13,7 @@ for (i in 1:length(list_files)){
 uniq_transcript <- unique(tr)
 S <- length(uniq_transcript)
 
-#Create a variable for the namble of samples
+#Create a variable for the nambe of samples
 num.cells <- length(tables)
 
 #Open an empty data frame 
