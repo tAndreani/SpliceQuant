@@ -2,7 +2,7 @@
 setwd("merge_table/")
 tr <- c()
 tables <- list()
-list_files <- list.files(pattern = ".input_to_merge_table")
+list_files <- list.files(pattern = ".txt")
 
 #Extract the number of transcipt among the different samples (uniq)
 for (i in 1:length(list_files)){
