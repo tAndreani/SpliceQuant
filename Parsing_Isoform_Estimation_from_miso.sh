@@ -1,3 +1,9 @@
+#This script is usefull if you want to extract a bed file of each isoform expressed in you dataset and the isoform length. 
+#In the end there is also a way to extract only the Gene Id, Isoform and PSI value.
+
+#run it like: bash ./Parsing_Isoform_Estimation_from_miso.sh
+
+
 #!/bin/bash
 awk '{ split($2,a,","); for (i in a) print $1, a[i]; }' */summary/adult_entero_rep1.isoforms.miso_summary > gene_psi.txt
 awk -F ' ' '{print $1}' gene_psi.txt > genes
@@ -264,8 +270,8 @@ echo -e "GeneID\tTrID\tPSI\tStart\tEnd\tLength" | cat - paneth_cells_rep3_isofor
 rm *.txt *.miso_summary end genes genes_two_isoforms isoforms isoforms_correct psi start transcript paneth_cells_rep3_isoform_expression.bed
 
 
-
-
+#Extract for each sample only Gene Id, Isoforms and PSI value
+for i in *.csv; do cut -f 1-3 $i > $i.txt ; done 
 
 
 
