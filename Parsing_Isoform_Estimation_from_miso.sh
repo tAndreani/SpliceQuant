@@ -1,5 +1,6 @@
-#This script is usefull if you want to extract a bed file of each isoform expressed in you dataset and the isoform length. 
-#In the end there is also a way to extract only the Gene Id, Isoform and PSI value.
+#This script is usefull if you want to extract a bed file of each isoform expressed and the isoform length from the .miso_summary file
+#Input *.miso_summary files
+#Outpu a file with GeneId TrId PSI value
 
 #run it like: bash ./Parsing_Isoform_Estimation_from_miso.sh
 
